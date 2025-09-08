@@ -1,5 +1,6 @@
 use actix_web::{web, App, HttpServer};
 use dotenvy::dotenv;
+use std::env;
 
 mod services;
 mod database;
@@ -25,6 +26,13 @@ async fn main() -> std::io::Result<()> {
     let id_gen = Id::new(machine_id);
 
 
+    // 👇 read port from env or fallback to 8080
+    let port: u16 = env::var("PORT")
+        .unwrap_or_else(|_| "8080".to_string())
+        .parse()
+        .expect("PORT must be a number");
+
+
     HttpServer::new(move || {
         App::new()
             .wrap(cors_config())
@@ -35,7 +43,7 @@ async fn main() -> std::io::Result<()> {
             .service(recent_urls)
             // .configure(handlers::init_routes) // Uncomment and implement route initialization
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", port))?
     .run()
     .await
 }
