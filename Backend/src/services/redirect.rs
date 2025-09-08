@@ -3,7 +3,7 @@ use sqlx::PgPool;
 
 
 
-#[get("/{short_url}")]
+#[get("/r/{short_url}")]
 pub async fn redirect_url(
     short_url: web::Path<String>,
     db: web::Data<PgPool>,

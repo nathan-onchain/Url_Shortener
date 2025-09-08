@@ -5,10 +5,13 @@ mod services;
 mod database;
 mod handlers;
 mod models;
+mod config;
 
+use crate::config::cors_config::cors_config;
 use crate::database::db::establish_connection;
 use crate::services::shorten::shorten_url;
 use crate::services::redirect::redirect_url;
+use crate::services::recent::recent_urls;
 use crate::models::idGenerator::Id;
 
 #[actix_web::main]
@@ -24,10 +27,12 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         App::new()
+            .wrap(cors_config())
             .app_data(web::Data::new(db_client.clone()))
             .app_data(web::Data::new(id_gen.clone()))
             .service(shorten_url)
             .service(redirect_url)
+            .service(recent_urls)
             // .configure(handlers::init_routes) // Uncomment and implement route initialization
     })
     .bind(("127.0.0.1", 8080))?
