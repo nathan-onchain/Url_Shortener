@@ -25,7 +25,11 @@ pub async fn shorten_url(
     .await;
 
     match result {
-        Ok(_) => HttpResponse::Ok().json(serde_json::json!({ "short_url": short_url })),
+        Ok(_) => HttpResponse::Ok().json(serde_json::json!({ 
+            "long_url": long_url.url,
+            "short_url": short_url,
+            "created_at": Utc::now().to_rfc3339()
+        })),
         Err(e) => HttpResponse::InternalServerError().body(format!("DB error: {}", e)),
     }
 }

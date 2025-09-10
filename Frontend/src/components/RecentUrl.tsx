@@ -19,7 +19,7 @@ export const RecentUrls = () => {
   useEffect(() => {
     const fetchUrls = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/recent-urls`);
+        const res = await fetch("http://localhost:5050/recent-urls");
         if (!res.ok) throw new Error("Failed to fetch URLs");
         const data: UrlData[] = await res.json();
 
@@ -109,7 +109,7 @@ export const RecentUrls = () => {
                     )}
                   </Button>
                   <Button
-                    onClick={() => window.open(url.short_url, "_blank")}
+                    onClick={() => window.open(`http://localhost:5050/r/${url.short_url}`, "_blank")}
                     variant="ghost"
                     size="sm"
                     className="h-8 w-8 p-0"

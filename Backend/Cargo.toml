@@ -11,5 +11,6 @@ chrono = "0.4"
 sqlx = { version = "0.7", features = ["postgres", "runtime-tokio-native-tls", "chrono"] }
 tokio = { version = "1", features = ["full"] }
 dotenvy = "0.15"
-actix-cors = "0.7.1"
+actix-cors = "0.7"
+
 

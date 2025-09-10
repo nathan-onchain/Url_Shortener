@@ -1,0 +1,9 @@
+/home/nathan-onchain/Desktop/Projects/url_shortener/target/debug/deps/derive_more-6d3d8ec20fc1d139.d: /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/lib.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/as.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/aserror.rs
+
+/home/nathan-onchain/Desktop/Projects/url_shortener/target/debug/deps/libderive_more-6d3d8ec20fc1d139.rmeta: /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/lib.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/as.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/aserror.rs
+
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/lib.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/as.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/mod.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/mod.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive_more-2.0.1/src/vendor/thiserror/aserror.rs:

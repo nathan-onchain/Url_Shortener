@@ -1,0 +1,11 @@
+/home/nathan-onchain/Desktop/Projects/url_shortener/target/debug/deps/sqlx-79d8f1224bab1554.d: /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/ty_match.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.md /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/test.md /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/install_drivers_note.md
+
+/home/nathan-onchain/Desktop/Projects/url_shortener/target/debug/deps/libsqlx-79d8f1224bab1554.rmeta: /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/mod.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/ty_match.rs /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.md /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/test.md /home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/install_drivers_note.md
+
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/mod.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/mod.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/ty_match.rs:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/lib.md:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/macros/test.md:
+/home/nathan-onchain/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlx-0.7.4/src/any/install_drivers_note.md:
