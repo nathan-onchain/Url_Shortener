@@ -37,18 +37,22 @@ export const ShortenedUrl = ({ data }: ShortenedUrlProps) => {
   const handleVisit = () => window.open(`http://localhost:5050/r/${data.short_url}`, "_blank");
 
   return (
-    <div className="space-y-4 p-6 bg-gradient-card rounded-lg border border-border shadow-glow">
+    <div className="space-y-4 p-6 bg-muted rounded-lg border border-border mt-4">
       <h3 className="text-lg font-semibold text-success">Your shortened URL is ready 🎉</h3>
       <p className="text-sm text-muted-foreground">
         Original: <span className="break-all">{data.long_url}</span>
       </p>
 
       <div className="flex space-x-2">
-        <Input value={data.short_url} readOnly className="flex-1 font-mono" />
-        <Button onClick={handleCopy} variant="outline" size="icon">
+        <Input 
+          value={data.short_url} 
+          readOnly 
+          className="flex-1 font-mono bg-input border-input text-primary" 
+        />
+        <Button onClick={handleCopy} variant="outline" size="icon" className="border-border">
           {copied ? <Check className="h-4 w-4 text-success" /> : <Copy className="h-4 w-4" />}
         </Button>
-        <Button onClick={handleVisit} variant="outline" size="icon">
+        <Button onClick={handleVisit} variant="outline" size="icon" className="border-border">
           <ExternalLink className="h-4 w-4" />
         </Button>
       </div>

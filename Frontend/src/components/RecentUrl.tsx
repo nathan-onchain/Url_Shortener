@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Copy, ExternalLink, Calendar } from "lucide-react";
+import { Copy, ExternalLink, Calendar, MousePointer } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface UrlData {
   long_url: string;
   short_url: string;
   created_at: string; // ISO string from backend
+  clicks?: number; // Add clicks field
 }
 
 export const RecentUrls = () => {
@@ -66,7 +67,7 @@ export const RecentUrls = () => {
 
   if (urls.length === 0) {
     return (
-      <Card className="bg-gradient-card shadow-card border-border">
+      <Card className="bg-card border-border">
         <CardHeader>
           <CardTitle>Recent URLs</CardTitle>
         </CardHeader>
@@ -80,27 +81,27 @@ export const RecentUrls = () => {
   }
 
   return (
-    <Card className="bg-gradient-card shadow-card border-border">
+    <Card className="bg-card border-border">
       <CardHeader>
         <CardTitle>Recent URLs</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {urls.map((url, index) => (
-          <div key={index} className="p-4 bg-muted rounded-lg space-y-3">
+          <div key={index} className="p-4 bg-muted rounded-lg space-y-3 border-b border-border last:border-b-0">
             <div className="space-y-1">
               <p className="text-sm text-muted-foreground break-all">
                 {url.long_url}
               </p>
               <div className="flex items-center justify-between">
-                <code className="text-sm font-mono text-primary bg-secondary px-2 py-1 rounded">
+                <p className="text-sm font-mono text-primary">
                   {url.short_url}
-                </code>
+                </p>
                 <div className="flex space-x-1">
                   <Button
                     onClick={() => handleCopy(url.short_url)}
                     variant="ghost"
                     size="sm"
-                    className="h-8 w-8 p-0"
+                    className="h-8 w-8 p-0 text-muted-foreground hover:text-foreground"
                   >
                     {copiedUrl === url.short_url ? (
                       <span className="text-success">✓</span>
@@ -112,7 +113,7 @@ export const RecentUrls = () => {
                     onClick={() => window.open(`http://localhost:5050/r/${url.short_url}`, "_blank")}
                     variant="ghost"
                     size="sm"
-                    className="h-8 w-8 p-0"
+                    className="h-8 w-8 p-0 text-muted-foreground hover:text-foreground"
                   >
                     <ExternalLink className="h-3 w-3" />
                   </Button>
@@ -124,6 +125,10 @@ export const RecentUrls = () => {
               <div className="flex items-center space-x-1">
                 <Calendar className="h-3 w-3" />
                 <span>{new Date(url.created_at).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <MousePointer className="h-3 w-3" />
+                <span className="font-semibold">{url.clicks || 0} clicks</span>
               </div>
             </div>
           </div>

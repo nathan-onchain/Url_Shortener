@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Link} from "lucide-react";
+import { Link, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface UrlInputProps {
@@ -58,17 +58,22 @@ export const UrlInput = ({ onShortened }: UrlInputProps) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="relative">
-        <Link className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5" />
+        <Link className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <Input
           type="url"
           placeholder="Enter your long URL here..."
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           disabled={isLoading}
-          className="pl-12 h-14"
+          className="pl-12 h-14 bg-input border-input text-foreground placeholder:text-muted-foreground"
         />
       </div>
-      <Button type="submit" disabled={isLoading} className="w-full h-14">
+      <Button 
+        type="submit" 
+        disabled={isLoading} 
+        className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+      >
+        <Zap className="h-4 w-4 mr-2" />
         {isLoading ? "Shortening..." : "Shorten URL"}
       </Button>
     </form>
